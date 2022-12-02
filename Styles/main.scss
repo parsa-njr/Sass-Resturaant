@@ -1,0 +1,290 @@
+@import 'tools';
+
+//Background Img
+
+#header-img {
+    background: url('../images/img-1.jpg') no-repeat center;
+    filter: grayscale(50%);
+    background-size: cover;
+    height: 650px;
+    position: relative;
+
+
+}
+
+// Navigation
+
+
+#navigation {
+    background-color: $dark;
+    opacity: 0.6;
+
+    &:hover {
+        background-color: $dark;
+        opacity: 1;
+        transition: 0.1s;
+    }
+
+    a {
+        color: $white;
+        padding: 8px 16px;
+
+        &:hover {
+            color: $dark;
+            background-color: $white;
+            transition: 0.1s;
+        }
+    }
+}
+
+
+
+// #navigation {
+//     background-color: $dark;
+//     background-size: cover;
+//     opacity: 0.6;
+//     position: sticky; 
+//     top: 0;
+//     left: 0;
+//     right: 0;
+
+//     &:hover {
+//         background-color: $dark;
+//         opacity: 1;
+//     }
+
+//     ul {
+
+//         margin: 0;
+//         padding: 0;
+//         height: 50px;
+
+//         li {
+//             margin: 4px;
+//             text-align: center;
+//             border: none;
+
+//             a {
+//                 color: $white;
+//                 padding: 8px 16px;
+
+//                 &:hover {
+//                     color: $dark;
+//                     background-color: $white;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+// Home
+
+#home {
+    text-align: center;
+    // position: relative;
+    // max-height: 650px;
+
+    h1 {
+        color: $white;
+        font-size: map-get($font-size, "x-large");
+        line-height: 150px;
+        margin-top: 70px;
+        // max-height: 150px;
+        min-width: 100px;
+    }
+
+    a {
+        @include home-btn;
+        font-size: map-get($font-size, "normal");
+        padding: 8px 16px;
+        // min-width: 100px;
+
+        &:hover {
+            color: $dark;
+            background-color: $white;
+            transition: 0.1s;
+        }
+    }
+
+    p {
+        @include home-btn;
+        // position: absolute;
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        padding: 5px 8px;
+
+    }
+
+
+}
+
+
+// Menue
+
+#menue {
+    background-color: $dark;
+
+    h1 {
+        color: $white;
+        margin-bottom: 40px;
+        font-size: map-get($font-size, "large");
+    }
+
+    div {
+        height: 900px;
+        position: relative;
+        top: 90px;
+
+    }
+
+    table {
+        color: $dark;
+        background-color: $white;
+        padding: 50px 20px;
+        width: 650px;
+        margin: 20px auto;
+        font-size: map-get($font-size, "normal");
+        height: 600px;
+    }
+}
+
+
+// About
+
+#about {
+    color: $white;
+    background-color: $about-color;
+    filter: grayscale(75%);
+    max-height: 1900px;
+    padding-top: 80px;
+
+
+    #about-header {
+        font-size: map-get($font-size, "large");
+    }
+
+    #pTop {
+        font-size: map-get($font-size, "small");
+        ;
+        line-height: 35px;
+        display: inline-block;
+        margin-top: 30px;
+
+    }
+
+    #chef {
+        width: 200px;
+        border-radius: 50%;
+        float: right;
+        margin-bottom: 40px;
+        position: relative;
+        bottom: 60px;
+        right: 90px;
+    }
+
+    #life {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    #hours-header {
+        font-size: map-get($font-size, "normal");
+        ;
+        margin-bottom: 40px;
+    }
+
+    #p-hours {
+        font-size: map-get($font-size, "x-small");
+        ;
+        line-height: 40px;
+    }
+
+}
+
+
+// CONTACT
+
+#contact {
+    background-color: $contact-color;
+    filter: grayscale(50%);
+    color: $white;
+    min-height: 1100px;
+
+
+
+    h1 {
+        font-size: map-get($font-size, "large");
+        padding: 80px;
+        text-align: center;
+
+    }
+
+    #p-content {
+        font-size: map-get($font-size, "small");
+        ;
+        line-height: 30px;
+        padding: 20px;
+
+        span {
+            background-color: $dark;
+            padding: 4px;
+        }
+    }
+
+    #p-reserve {
+        font-size: map-get($font-size, "normal");
+        margin: 20px;
+    }
+
+    form {
+        margin-top: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 19px;
+        margin-bottom: 24px;
+        font-size: map-get($font-size, "small");
+    }
+
+    button {
+        @extend input;
+        border: none;
+
+    }
+}
+
+
+
+// Footer 
+
+footer {
+    // text-align: center;
+    width: 100%;
+    min-height: 150px;
+    background-color: $dark;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+
+@media only screen and (max-width: 577px) {
+    #home {
+        h1 {
+            font-size: map-get($font-size, "large");
+        }
+
+        a {
+            font-size: map-get($font-size, "small");
+        }
+    }
+}
